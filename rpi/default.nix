@@ -19,7 +19,7 @@ in
       };
       libcamera-overlay = {
         enable = mkOption {
-          default = false;
+          default = true;
           type = types.bool;
           description = ''
             If enabled then the libcamera overlay is applied which
@@ -29,7 +29,7 @@ in
       };
       uboot = {
         enable = mkOption {
-          default = true;
+          default = false;
           type = types.bool;
           description = ''
             If enabled then uboot is used as the bootloader. If disabled
