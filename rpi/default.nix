@@ -38,7 +38,7 @@ in
       };
       uboot = {
         enable = mkOption {
-          default = false;
+          default = true;
           type = types.bool;
           description = ''
             If enabled then uboot is used as the bootloader. If disabled
