@@ -28,7 +28,7 @@ in
       };
       libcamera-overlay = {
         enable = mkOption {
-          default = true;
+          default = false;
           type = types.bool;
           description = ''
             If enabled then the libcamera overlay is applied which
