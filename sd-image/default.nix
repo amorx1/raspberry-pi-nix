@@ -1,9 +1,16 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ./sd-image.nix ];
+  imports = [ ./sd-image.nix <home-manager/nixos> ];
 
   config = {
+    home-manager.users.amor = { pkgs, ... }: {
+      home.stateVersion = "23.11";
+      home.packages = with pkgs; [
+        zellij
+      ];
+    };
+
     boot.loader.grub.enable = false;
 
     boot.consoleLogLevel = lib.mkDefault 7;
